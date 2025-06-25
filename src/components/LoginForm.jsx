@@ -1,7 +1,11 @@
+import { useNavigate } from 'react-router-dom';
+
 const LoginForm = () => {
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Lógica de login aqui
+    navigate('/home');
   };
 
   return (

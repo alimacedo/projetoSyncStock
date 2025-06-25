@@ -1,12 +1,15 @@
+import { Outlet } from 'react-router-dom';
 import Header from './components/Header';
-import LoginForm from './components/LoginForm';
 import Footer from './components/Footer';
+import './index.css';
 
 function App() {
   return (
     <div className="app">
       <Header />
-      <LoginForm />
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </div>
   );
