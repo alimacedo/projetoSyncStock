@@ -1,6 +1,6 @@
 #bloco { 
     display: flex;
-    margin-left: 10%;
+    margin-left: 13%;
     margin-right: 5%;
     margin-top: 6%;
     flex-wrap: wrap;
@@ -8,14 +8,8 @@
 }
 
 .box {
-    flex: 1;
     min-width: 250px;
     max-width: 300px;
-    transition: transform 0.3s ease;
-}
-
-.box:hover {
-    transform: scale(1.05);
 }
 
 .box h3 {
