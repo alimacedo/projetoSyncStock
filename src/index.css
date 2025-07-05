@@ -31,3 +31,197 @@ a {
     text-decoration: none;
     color: white;
     }
+
+/* login */
+
+.login-container {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    margin: 25px auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.input-login {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="email"], input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.btn-entrar {
+    width: 95%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-entrar:hover {
+    background-color: #2980b9;
+}
+
+.forgot-password {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.forgot-password a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.register {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register p {
+    font-size: 14px;
+}
+
+.register a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
+
+/* Home */
+
+#blocohome { 
+    display: flex;
+    margin-left: 13%;
+    margin-right: 5%;
+    margin-top: 6%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.boxhome {
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.boxhome h3 {
+    background-color: #2c3e50;
+    margin: 10px auto;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    width: 80%;
+}
+
+.imgboxhome {
+    max-width: 80%;
+    border: 2px solid #1D2B53;
+    border-radius: 8px;
+    margin: 5px auto;
+    display: block;
+    padding: 5px;
+}
+
+/* Gestao */
+
+.boxgestao {
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.boxgestao h3 {
+    background-color: #2c3e50;
+    margin: 10px auto;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    width: 80%;
+}
+
+.imgboxgestao {
+    max-width: 80%;
+    border: 2px solid #1D2B53;
+    border-radius: 8px;
+    margin: 5px auto;
+    display: block;
+    padding: 5px;
+}
+
+
+#blocogestao { 
+    display: flex;
+    margin-left: 22%;
+    margin-top: 5%;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+/* Projetos */
+
+#blocoprojetos { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    margin-top: 5%;
+    padding: 20px;
+}
+
+.boxprojetos {
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.boxprojetos h3 {
+    background-color: #2c3e50;
+    margin: 10px auto;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    width: 80%;
+}
+
+.imgboxprojetos {
+    max-width: 80%;
+    border: 2px solid #1D2B53;
+    border-radius: 8px;
+    margin: 5px auto;
+    display: block;
+    padding: 5px;
+}

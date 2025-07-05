@@ -7,7 +7,6 @@ import LoginForm from './components/LoginForm';
 import GestaoEstoque from './components/GestaoEstoque';
 import Projetos from './components/Projetos';
 import './index.css';
-import './styles/Login.css';
 
 const router = createBrowserRouter([
   {
