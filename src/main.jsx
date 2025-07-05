@@ -5,6 +5,7 @@ import App from './App';
 import Home from './components/Home';
 import LoginForm from './components/LoginForm';
 import GestaoEstoque from './components/GestaoEstoque';
+import Projetos from './components/Projetos';
 import './index.css';
 import './styles/Login.css';
 
@@ -15,7 +16,8 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <LoginForm /> },
       { path: "home", element: <Home /> },
-      { path: "gestao-estoque", element: <GestaoEstoque /> }
+      { path: "gestao-estoque", element: <GestaoEstoque /> },
+      { path: "projetos", element: <Projetos /> }
     ]
   }
 ]);
