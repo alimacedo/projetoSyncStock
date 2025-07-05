@@ -225,3 +225,37 @@ input[type="email"]:focus, input[type="password"]:focus {
     display: block;
     padding: 5px;
 }
+
+/* Fornecedores */
+
+#blocofornecedores { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    margin-top: 5%;
+    padding: 20px;
+}
+
+.boxfornecedores {
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.boxfornecedores h3 {
+    background-color: #2c3e50;
+    margin: 10px auto;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    width: 80%;
+}
+
+.imgboxfornecedores {
+    max-width: 80%;
+    border: 2px solid #1D2B53;
+    border-radius: 8px;
+    margin: 5px auto;
+    display: block;
+    padding: 5px;
+}
