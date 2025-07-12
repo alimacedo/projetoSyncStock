@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 const ModalCadastroProduto = ({ onClose, onSave }) => {
-  // Estado para armazenar os dados do formulário
   const [formData, setFormData] = useState({
     nome: '',
     codigo: '',
@@ -11,7 +10,6 @@ const ModalCadastroProduto = ({ onClose, onSave }) => {
     unidadeMedida: 'un'
   });
 
-  // Opções de unidades de medida
   const unidadesMedida = [
     { value: 'un', label: 'Unidade' },
     { value: 'kg', label: 'Quilograma' },
@@ -20,7 +18,6 @@ const ModalCadastroProduto = ({ onClose, onSave }) => {
     { value: 'm', label: 'Metro' }
   ];
 
-  // Manipulador de alterações nos campos
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -29,11 +26,10 @@ const ModalCadastroProduto = ({ onClose, onSave }) => {
     }));
   };
 
-  // Manipulador de envio do formulário
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSave(formData); // Chama a função de salvar do componente pai
-    onClose(); // Fecha o modal
+    onSave(formData);
+    onClose();
   };
 
   return (

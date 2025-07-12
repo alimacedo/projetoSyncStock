@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
-import Home from './components/Home';
+import Home from './pages/Home';
 import LoginForm from './components/LoginForm';
-import GestaoEstoque from './components/GestaoEstoque';
-import Projetos from './components/Projetos';
-import Fornecedores from './components/Fornecedores';
+import GestaoEstoque from './pages/GestaoEstoque';
+import Projetos from './pages/Projetos';
+import Fornecedores from './pages/Fornecedores';
 import './index.css';
 
 const router = createBrowserRouter([
