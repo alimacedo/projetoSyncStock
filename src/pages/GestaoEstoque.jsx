@@ -1,13 +1,30 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import ModalCadastroProduto from '../components/ModalCadastroProduto';
+import ModalListarEstoque from '../components/ModalListarEstoque';
 
 const GestaoEstoque = () => {
-  const [showModal, setShowModal] = useState(false);
+  const [showCadastroModal, setShowCadastroModal] = useState(false);
+  const [showListarModal, setShowListarModal] = useState(false);
+
+  const [produtos, setProdutos] = useState([
+    {
+      nome: 'Parafuso Sextavado',
+      codigo: 'PSX-001',
+      quantidade: 15,
+      categoria: 'Parafusos',
+      fornecedor: 'Fornecedor A',
+      dataEntrada: '2025-07-09',
+      localizacao: 'Prateleira B3',
+      status: 'Ativo'
+    },
+    
+  ]);
 
   const handleSaveProduto = (produtoData) => {
     console.log('Produto cadastrado:', produtoData);
-    setShowModal(false);
+    
+    setProdutos([...produtos, produtoData]);
+    setShowCadastroModal(false);
   };
 
   return (
@@ -15,7 +32,7 @@ const GestaoEstoque = () => {
       <div id="blocogestao">
         <div 
           className="boxgestao" 
-          onClick={() => setShowModal(true)}
+          onClick={() => setShowCadastroModal(true)}
           style={{ cursor: 'pointer' }}
         >
           <img 
@@ -26,22 +43,31 @@ const GestaoEstoque = () => {
           <h3>Cadastrar Produto</h3>
         </div>
         
-        <div className="boxgestao">
-          <Link to="/listar-estoque" className="boxgestao-link">
-            <img 
-              src="./src/images/listarestoque.png" 
-              className="imgboxgestao" 
-              alt="Listar Estoque" 
-            />
-            <h3>Listar Estoque</h3>
-          </Link>
+        <div 
+          className="boxgestao" 
+          onClick={() => setShowListarModal(true)}
+          style={{ cursor: 'pointer' }}
+        >
+          <img 
+            src="./src/images/listarestoque.png" 
+            className="imgboxgestao" 
+            alt="Listar Estoque" 
+          />
+          <h3>Listar Estoque</h3>
         </div>
       </div>
 
-      {showModal && (
+      {showCadastroModal && (
         <ModalCadastroProduto
-          onClose={() => setShowModal(false)}
+          onClose={() => setShowCadastroModal(false)}
           onSave={handleSaveProduto}
+        />
+      )}
+
+      {showListarModal && (
+        <ModalListarEstoque
+          onClose={() => setShowListarModal(false)}
+          produtos={produtos}
         />
       )}
     </>
