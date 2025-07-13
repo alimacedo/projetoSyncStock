@@ -170,7 +170,8 @@ input[type="email"]:focus, input[type="password"]:focus {
 }
 
 .fundo-modal-cadastroProduto, .fundo-modal-listarEstoque,
-.fundo-modal-cadastroProjeto, .fundo-modal-editarProjeto {
+.fundo-modal-cadastroProjeto, .fundo-modal-editarProjeto,
+.fundo-modal-listarProjeto {
   position: fixed;
   top: 0;
   left: 0;
@@ -184,7 +185,7 @@ input[type="email"]:focus, input[type="password"]:focus {
 }
 
 .caixa-modal-cadastroProduto, .caixa-modal-cadastroProjeto,
-.caixa-modal-editarProjeto {
+.caixa-modal-editarProjeto, .caixa-modal-listarProjeto {
   background-color: white;
   padding: 18px 24px;
   border-radius: 8px;
@@ -207,7 +208,8 @@ input[type="email"]:focus, input[type="password"]:focus {
 }
 
 .fechar-modal-cadastroProduto, .fechar-modal-listarEstoque,
-.fechar-modal-cadastroProjeto, .fechar-modal-editarProjeto {
+.fechar-modal-cadastroProjeto, .fechar-modal-editarProjeto,
+.fechar-modal-listarProjeto {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -219,7 +221,8 @@ input[type="email"]:focus, input[type="password"]:focus {
 }
 
 .titulo-modal-cadastroProduto, .titulo-modal-listarEstoque,
-.titulo-modal-cadastroProjeto, .titulo-modal-editarProjeto {
+.titulo-modal-cadastroProjeto, .titulo-modal-editarProjeto,
+.titulo-modal-listarProjeto {
   margin-top: 0;
   color: #2c3e50;
   text-align: center;
@@ -311,7 +314,6 @@ input[type="email"]:focus, input[type="password"]:focus {
 .form-modal {
   display: flex;
   flex-direction: column;
-  
 }
 
 .grupo-form {
@@ -378,6 +380,81 @@ input[type="email"]:focus, input[type="password"]:focus {
 
 .btn-salvar-editarprojeto:hover {
   background-color: #0755bb;;
+}
+
+.controles-busca {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.grupo-busca {
+  flex-grow: 1;
+}
+
+.entrada-busca {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.seletor-filtro {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.rodape-modal {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-fechar-listarprojeto {
+  padding: 8px 16px;
+  background-color: #6cd8c8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-fechar-listarprojeto:hover {
+  background-color: #58c2b2;
+}
+
+.tabela-container {
+  overflow-y: auto;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+.tabela-projeto {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-projeto th, .tabela-projeto td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.tabela-projeto th {
+  background-color: #f5f5f5;
+  position: sticky;
+  top: 0;
+}
+
+.tabela-projeto tr:hover {
+  background-color: #f9f9f9;
+}
+
+.sem-resultados {
+  text-align: center;
+  padding: 20px;
+  color: #666;
 }
 
 .boxgestao-link {
