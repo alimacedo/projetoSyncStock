@@ -1,15 +1,17 @@
 import { useState } from 'react';
 
 const ModalCadastroProduto = ({ onClose, onSave }) => {
+  // Estado para armazenar os dados do formulário
   const [formData, setFormData] = useState({
     nome: '',
-    codigo: '',
-    fornecedor: '',
-    categoria: '',
+    especialidade: '',
+    descricao: '',
     quantidade: '',
-    unidadeMedida: 'un'
+    unidadeMedida: 'un',
+    precoUnitario: ''
   });
 
+  // Opções de unidades de medida
   const unidadesMedida = [
     { value: 'un', label: 'Unidade' },
     { value: 'kg', label: 'Quilograma' },
@@ -18,6 +20,7 @@ const ModalCadastroProduto = ({ onClose, onSave }) => {
     { value: 'm', label: 'Metro' }
   ];
 
+  // Manipulador de alterações nos campos
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -26,17 +29,18 @@ const ModalCadastroProduto = ({ onClose, onSave }) => {
     }));
   };
 
+  // Manipulador de envio do formulário
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSave(formData);
-    onClose();
+    onSave(formData); // Chama a função de salvar do componente pai
+    onClose(); // Fecha o modal
   };
 
   return (
-    <div className="fundo-modal">
-      <div className="caixa-modal">
-        <button className="fechar-modal" onClick={onClose}>×</button>
-        <h2 className="titulo-modal">Cadastrar Novo Produto</h2>
+    <div className="fundo-modal-cadastroProduto">
+      <div className="caixa-modal-cadastroProduto">
+        <button className="fechar-modal-cadastroProduto" onClick={onClose}>×</button>
+        <h2 className="titulo-modal-cadastroProduto">Cadastrar Novo Produto</h2>
         
         <form onSubmit={handleSubmit} className="form-modal">
           <div className="grupo-form">
@@ -53,43 +57,31 @@ const ModalCadastroProduto = ({ onClose, onSave }) => {
           </div>
 
           <div className="grupo-form">
-            <label htmlFor="codigo" className="marca-form">Código</label>
+            <label htmlFor="especialidade" className="marca-form">Especialidade</label>
             <input
               type="text"
-              id="codigo"
-              name="codigo"
+              id="especialidade"
+              name="especialidade"
               className="entrada-form"
-              value={formData.codigo}
+              value={formData.especialidade}
               onChange={handleChange}
               required
             />
           </div>
 
           <div className="grupo-form">
-            <label htmlFor="fornecedor" className="marca-form">Fornecedor</label>
-            <input
-              type="text"
-              id="fornecedor"
-              name="fornecedor"
+            <label htmlFor="descricao" className="marca-form">Descrição</label>
+            <textarea
+              id="descricao"
+              name="descricao"
               className="entrada-form"
-              value={formData.fornecedor}
+              value={formData.descricao}
               onChange={handleChange}
-              required
-            />
+              rows={4}
+              placeholder="Descreva o produto..."
+            ></textarea>
           </div>
 
-          <div className="grupo-form">
-            <label htmlFor="categoria" className="marca-form">Categoria</label>
-            <input
-              type="text"
-              id="categoria"
-              name="categoria"
-              className="entrada-form"
-              value={formData.categoria}
-              onChange={handleChange}
-              required
-            />
-          </div>
 
           <div className="grupo-form">
             <label htmlFor="quantidade" className="marca-form">Quantidade em Estoque</label>
@@ -122,6 +114,30 @@ const ModalCadastroProduto = ({ onClose, onSave }) => {
               ))}
             </select>
           </div>
+
+          <div className="grupo-form">
+            <label htmlFor="precoUnitario" className="marca-form">Preço Unitário</label>
+            <input
+              type="text"
+              id="precoUnitario"
+              name="precoUnitario"
+              className="entrada-form"
+              value={formData.precoUnitario}
+              onChange={(e) => {
+                const valor = e.target.value;
+                const regex = /^\d*([.,]\d{0,2})?$/; // até 2 casas decimais
+                if (valor === '' || regex.test(valor)) {
+                  setFormData(prev => ({
+                    ...prev,
+                    precoUnitario: valor.replace(',', '.')
+                  }));
+                }
+              }}
+              placeholder="0.00"
+              required
+            />
+          </div>
+
 
           <div className="acoes-form">
             <button 
