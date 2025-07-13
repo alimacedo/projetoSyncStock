@@ -172,7 +172,8 @@ input[type="email"]:focus, input[type="password"]:focus {
 
 .fundo-modal-cadastroProduto, .fundo-modal-listarEstoque,
 .fundo-modal-cadastroProjeto, .fundo-modal-editarProjeto,
-.fundo-modal-listarProjeto, .fundo-modal-excluirProjeto {
+.fundo-modal-listarProjeto, .fundo-modal-excluirProjeto,
+.fundo-modal-cadastroFornecedor {
   position: fixed;
   top: 0;
   left: 0;
@@ -186,7 +187,8 @@ input[type="email"]:focus, input[type="password"]:focus {
 }
 
 .caixa-modal-cadastroProduto, .caixa-modal-cadastroProjeto,
-.caixa-modal-editarProjeto, .caixa-modal-listarProjeto, .caixa-modal-excluirProjeto {
+.caixa-modal-editarProjeto, .caixa-modal-listarProjeto,
+.caixa-modal-excluirProjeto {
   background-color: white;
   padding: 18px 24px;
   border-radius: 8px;
@@ -194,6 +196,18 @@ input[type="email"]:focus, input[type="password"]:focus {
   max-width: 500px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
+}
+
+.caixa-modal-cadastroFornecedor {
+  width: 50%;
+  max-width: 1200px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: relative; 
 }
 
 .caixa-modal-listarEstoque {
@@ -210,7 +224,8 @@ input[type="email"]:focus, input[type="password"]:focus {
 
 .fechar-modal-cadastroProduto, .fechar-modal-listarEstoque,
 .fechar-modal-cadastroProjeto, .fechar-modal-editarProjeto,
-.fechar-modal-listarProjeto, .fechar-modal-excluirProjeto {
+.fechar-modal-listarProjeto, .fechar-modal-excluirProjeto,
+.fechar-modal-cadastroFornecedor {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -223,7 +238,8 @@ input[type="email"]:focus, input[type="password"]:focus {
 
 .titulo-modal-cadastroProduto, .titulo-modal-listarEstoque,
 .titulo-modal-cadastroProjeto, .titulo-modal-editarProjeto,
-.titulo-modal-listarProjeto, .titulo-modal-excluirProjeto {
+.titulo-modal-listarProjeto, .titulo-modal-excluirProjeto,
+.titulo-modal-cadastroFornecedor {
   margin-top: 0;
   color: #2c3e50;
   text-align: center;
