@@ -169,7 +169,8 @@ input[type="email"]:focus, input[type="password"]:focus {
     padding: 20px;
 }
 
-.fundo-modal-cadastroProduto, .fundo-modal-listarEstoque {
+.fundo-modal-cadastroProduto, .fundo-modal-listarEstoque,
+.fundo-modal-cadastroProjeto {
   position: fixed;
   top: 0;
   left: 0;
@@ -182,7 +183,7 @@ input[type="email"]:focus, input[type="password"]:focus {
   z-index: 1000;
 }
 
-.caixa-modal-cadastroProduto {
+.caixa-modal-cadastroProduto, .caixa-modal-cadastroProjeto {
   background-color: white;
   padding: 18px 24px;
   border-radius: 8px;
@@ -204,7 +205,8 @@ input[type="email"]:focus, input[type="password"]:focus {
   position: relative;
 }
 
-.fechar-modal-cadastroProduto, .fechar-modal-listarEstoque {
+.fechar-modal-cadastroProduto, .fechar-modal-listarEstoque,
+.fechar-modal-cadastroProjeto {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -215,7 +217,8 @@ input[type="email"]:focus, input[type="password"]:focus {
   color: #666;
 }
 
-.titulo-modal-cadastroProduto, .titulo-modal-listarEstoque {
+.titulo-modal-cadastroProduto, .titulo-modal-listarEstoque,
+.titulo-modal-cadastroProjeto {
   margin-top: 0;
   color: #2c3e50;
   text-align: center;
