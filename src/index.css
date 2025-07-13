@@ -170,7 +170,7 @@ input[type="email"]:focus, input[type="password"]:focus {
 }
 
 .fundo-modal-cadastroProduto, .fundo-modal-listarEstoque,
-.fundo-modal-cadastroProjeto {
+.fundo-modal-cadastroProjeto, .fundo-modal-editarProjeto {
   position: fixed;
   top: 0;
   left: 0;
@@ -183,7 +183,8 @@ input[type="email"]:focus, input[type="password"]:focus {
   z-index: 1000;
 }
 
-.caixa-modal-cadastroProduto, .caixa-modal-cadastroProjeto {
+.caixa-modal-cadastroProduto, .caixa-modal-cadastroProjeto,
+.caixa-modal-editarProjeto {
   background-color: white;
   padding: 18px 24px;
   border-radius: 8px;
@@ -206,7 +207,7 @@ input[type="email"]:focus, input[type="password"]:focus {
 }
 
 .fechar-modal-cadastroProduto, .fechar-modal-listarEstoque,
-.fechar-modal-cadastroProjeto {
+.fechar-modal-cadastroProjeto, .fechar-modal-editarProjeto {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -218,7 +219,7 @@ input[type="email"]:focus, input[type="password"]:focus {
 }
 
 .titulo-modal-cadastroProduto, .titulo-modal-listarEstoque,
-.titulo-modal-cadastroProjeto {
+.titulo-modal-cadastroProjeto, .titulo-modal-editarProjeto {
   margin-top: 0;
   color: #2c3e50;
   text-align: center;
@@ -280,7 +281,6 @@ input[type="email"]:focus, input[type="password"]:focus {
   background-color: #f5f5f5;
 }
 
-/* Status Badges */
 .indicador-status {
   padding: 4px 8px;
   border-radius: 12px;
@@ -365,6 +365,19 @@ input[type="email"]:focus, input[type="password"]:focus {
 
 .btn-cadastrar:hover {
   background-color: #27ae60;
+}
+
+.btn-salvar-editarprojeto {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-salvar-editarprojeto:hover {
+  background-color: #0755bb;;
 }
 
 .boxgestao-link {
