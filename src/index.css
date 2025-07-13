@@ -142,6 +142,7 @@ input[type="email"]:focus, input[type="password"]:focus {
     padding: 10px;
     color: white;
     width: 80%;
+    cursor: pointer;
 }
 
 .imgboxhome, .imgboxgestao, .imgboxprojetos, .imgboxfornecedores {
@@ -171,7 +172,7 @@ input[type="email"]:focus, input[type="password"]:focus {
 
 .fundo-modal-cadastroProduto, .fundo-modal-listarEstoque,
 .fundo-modal-cadastroProjeto, .fundo-modal-editarProjeto,
-.fundo-modal-listarProjeto {
+.fundo-modal-listarProjeto, .fundo-modal-excluirProjeto {
   position: fixed;
   top: 0;
   left: 0;
@@ -185,7 +186,7 @@ input[type="email"]:focus, input[type="password"]:focus {
 }
 
 .caixa-modal-cadastroProduto, .caixa-modal-cadastroProjeto,
-.caixa-modal-editarProjeto, .caixa-modal-listarProjeto {
+.caixa-modal-editarProjeto, .caixa-modal-listarProjeto, .caixa-modal-excluirProjeto {
   background-color: white;
   padding: 18px 24px;
   border-radius: 8px;
@@ -209,7 +210,7 @@ input[type="email"]:focus, input[type="password"]:focus {
 
 .fechar-modal-cadastroProduto, .fechar-modal-listarEstoque,
 .fechar-modal-cadastroProjeto, .fechar-modal-editarProjeto,
-.fechar-modal-listarProjeto {
+.fechar-modal-listarProjeto, .fechar-modal-excluirProjeto {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -222,7 +223,7 @@ input[type="email"]:focus, input[type="password"]:focus {
 
 .titulo-modal-cadastroProduto, .titulo-modal-listarEstoque,
 .titulo-modal-cadastroProjeto, .titulo-modal-editarProjeto,
-.titulo-modal-listarProjeto {
+.titulo-modal-listarProjeto, .titulo-modal-excluirProjeto {
   margin-top: 0;
   color: #2c3e50;
   text-align: center;
@@ -282,6 +283,50 @@ input[type="email"]:focus, input[type="password"]:focus {
 
 .estoque-table-listarEstoque tr:hover {
   background-color: #f5f5f5;
+}
+
+.lista-projetos-exclusao {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.lista-projetos-exclusao ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item-projeto {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.item-projeto:hover {
+  background-color: #f5f5f5;
+}
+
+.item-projeto.selecionado {
+  border-color: #dc3545;
+  background-color: #f8d7da;
+}
+
+.projeto-detalhes {
+  display: block;
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 5px;
+}
+
+.aviso-exclusao {
+  padding: 10px;
+  background-color: #fff3cd;
+  border-radius: 4px;
+  margin: 15px 0;
 }
 
 .indicador-status {
@@ -355,6 +400,34 @@ input[type="email"]:focus, input[type="password"]:focus {
   background-color: #c0392b;
 }
 
+.btn-excluir-modalExcluirProjeto {
+  padding: 12px 24px;
+  background-color: #877b79;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-excluir-modalExcluirProjeto:hover {
+  background-color: #6d6463;
+}
+
+.btn-cancelar-modalExcluirProjeto {
+  padding: 12px 24px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-cancelar-modalExcluirProjeto:hover {
+  background-color: #c0392b;
+}
+
 .btn-cadastrar {
   padding: 12px 24px;
   background-color: #2ecc71;
@@ -380,6 +453,19 @@ input[type="email"]:focus, input[type="password"]:focus {
 
 .btn-salvar-editarprojeto:hover {
   background-color: #0755bb;;
+}
+
+.btn-excluir {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-excluir:hover {
+  background-color: #c0392b;
 }
 
 .controles-busca {
