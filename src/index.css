@@ -173,7 +173,7 @@ input[type="email"]:focus, input[type="password"]:focus {
 .fundo-modal-cadastroProduto, .fundo-modal-listarEstoque,
 .fundo-modal-cadastroProjeto, .fundo-modal-editarProjeto,
 .fundo-modal-listarProjeto, .fundo-modal-excluirProjeto,
-.fundo-modal-cadastroFornecedor {
+.fundo-modal-cadastroFornecedor, .fundo-modal-listarFornecedor {
   position: fixed;
   top: 0;
   left: 0;
@@ -222,10 +222,21 @@ input[type="email"]:focus, input[type="password"]:focus {
   position: relative;
 }
 
+.caixa-modal-listarFornecedor {
+  width: 90%;
+  max-width: 900px;
+  overflow-y: auto;
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
 .fechar-modal-cadastroProduto, .fechar-modal-listarEstoque,
 .fechar-modal-cadastroProjeto, .fechar-modal-editarProjeto,
 .fechar-modal-listarProjeto, .fechar-modal-excluirProjeto,
-.fechar-modal-cadastroFornecedor {
+.fechar-modal-cadastroFornecedor, .fechar-modal-listarFornecedor {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -239,7 +250,7 @@ input[type="email"]:focus, input[type="password"]:focus {
 .titulo-modal-cadastroProduto, .titulo-modal-listarEstoque,
 .titulo-modal-cadastroProjeto, .titulo-modal-editarProjeto,
 .titulo-modal-listarProjeto, .titulo-modal-excluirProjeto,
-.titulo-modal-cadastroFornecedor {
+.titulo-modal-cadastroFornecedor, .titulo-modal-listarFornecedor {
   margin-top: 0;
   color: #2c3e50;
   text-align: center;
@@ -532,24 +543,26 @@ input[type="email"]:focus, input[type="password"]:focus {
   margin-bottom: 20px;
 }
 
-.tabela-projeto {
+.tabela-projeto, .tabela-fornecedor {
   width: 100%;
   border-collapse: collapse;
 }
 
-.tabela-projeto th, .tabela-projeto td {
+.tabela-projeto th, .tabela-projeto td,
+.tabela-fornecedor th, .tabela-fornecedor td {
   padding: 12px 15px;
   text-align: left;
   border-bottom: 1px solid #eee;
 }
 
-.tabela-projeto th {
+.tabela-projeto th, .tabela-fornecedor th {
   background-color: #f5f5f5;
   position: sticky;
   top: 0;
 }
 
-.tabela-projeto tr:hover {
+.tabela-projeto tr:hover,
+.tabela-fornecedor tr:hover {
   background-color: #f9f9f9;
 }
 
@@ -567,4 +580,14 @@ input[type="email"]:focus, input[type="password"]:focus {
 
 .boxgestao {
   cursor: pointer;
+}
+
+.btn-editar {
+  padding: 12px 24px;
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }

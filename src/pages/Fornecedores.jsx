@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ModalCadastroFornecedor from '../components/ModalCadastroFornecedor';
+import ModalListarFornecedor from '../components/ModalListarFornecedor';
 
 const Fornecedores = () => {
   const [modalCadastroAberto, setModalCadastroAberto] = useState(false);
@@ -79,7 +80,7 @@ const Fornecedores = () => {
       )}
 
       {modalListarAberto && (
-        <ModalListarFornecedores
+        <ModalListarFornecedor
           fornecedores={fornecedores}
           onEditar={(fornecedor) => {
             setFornecedorSelecionado(fornecedor);
