@@ -9,6 +9,7 @@ import Projetos from './pages/Projetos';
 import Fornecedores from './pages/Fornecedores';
 import Produtos from './pages/Produtos';
 import NotaFiscal from './pages/NotaFiscal';
+import LocalArmazenamento from './pages/LocalArmazenamento';
 import './index.css';
 
 const router = createBrowserRouter([
@@ -22,7 +23,8 @@ const router = createBrowserRouter([
       { path: "projetos", element: <Projetos /> },
       { path: "fornecedores", element: <Fornecedores /> },
       { path: "produtos", element: <Produtos /> },
-      { path: "nota-fiscal", element: <NotaFiscal /> }
+      { path: "nota-fiscal", element: <NotaFiscal /> },
+      { path: "local-armazenamento", element: <LocalArmazenamento /> }
     ]
   }
 ]);
