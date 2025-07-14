@@ -5,6 +5,8 @@ const Header = () => {
 
   const getTitle = () => {
     switch (location.pathname) {
+      case '/nota-fiscal':
+        return 'Nota Fiscal';
       case '/produtos':
         return 'Produtos';
       case '/fornecedores':

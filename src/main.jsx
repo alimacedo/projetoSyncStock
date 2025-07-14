@@ -8,6 +8,7 @@ import GestaoEstoque from './pages/GestaoEstoque';
 import Projetos from './pages/Projetos';
 import Fornecedores from './pages/Fornecedores';
 import Produtos from './pages/Produtos';
+import NotaFiscal from './pages/NotaFiscal';
 import './index.css';
 
 const router = createBrowserRouter([
@@ -20,7 +21,8 @@ const router = createBrowserRouter([
       { path: "gestao-estoque", element: <GestaoEstoque /> },
       { path: "projetos", element: <Projetos /> },
       { path: "fornecedores", element: <Fornecedores /> },
-      { path: "produtos", element: <Produtos /> }
+      { path: "produtos", element: <Produtos /> },
+      { path: "nota-fiscal", element: <NotaFiscal /> }
     ]
   }
 ]);
