@@ -173,7 +173,8 @@ input[type="email"]:focus, input[type="password"]:focus {
 .fundo-modal-cadastroProduto, .fundo-modal-listarEstoque,
 .fundo-modal-cadastroProjeto, .fundo-modal-editarProjeto,
 .fundo-modal-listarProjeto, .fundo-modal-excluirProjeto,
-.fundo-modal-cadastroFornecedor, .fundo-modal-listarFornecedor {
+.fundo-modal-cadastroFornecedor, .fundo-modal-listarFornecedor,
+.fundo-modal-editarFornecedor {
   position: fixed;
   top: 0;
   left: 0;
@@ -198,7 +199,7 @@ input[type="email"]:focus, input[type="password"]:focus {
   position: relative;
 }
 
-.caixa-modal-cadastroFornecedor {
+.caixa-modal-cadastroFornecedor, .caixa-modal-editarFornecedor {
   width: 50%;
   max-width: 1200px;
   max-height: 90vh;
@@ -236,7 +237,8 @@ input[type="email"]:focus, input[type="password"]:focus {
 .fechar-modal-cadastroProduto, .fechar-modal-listarEstoque,
 .fechar-modal-cadastroProjeto, .fechar-modal-editarProjeto,
 .fechar-modal-listarProjeto, .fechar-modal-excluirProjeto,
-.fechar-modal-cadastroFornecedor, .fechar-modal-listarFornecedor {
+.fechar-modal-cadastroFornecedor, .fechar-modal-listarFornecedor,
+.fechar-modal-editarFornecedor {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -250,7 +252,8 @@ input[type="email"]:focus, input[type="password"]:focus {
 .titulo-modal-cadastroProduto, .titulo-modal-listarEstoque,
 .titulo-modal-cadastroProjeto, .titulo-modal-editarProjeto,
 .titulo-modal-listarProjeto, .titulo-modal-excluirProjeto,
-.titulo-modal-cadastroFornecedor, .titulo-modal-listarFornecedor {
+.titulo-modal-cadastroFornecedor, .titulo-modal-listarFornecedor,
+.titulo-modal-editarFornecedor {
   margin-top: 0;
   color: #2c3e50;
   text-align: center;
@@ -455,7 +458,7 @@ input[type="email"]:focus, input[type="password"]:focus {
   background-color: #c0392b;
 }
 
-.btn-cadastrar {
+.btn-cadastrar, .btn-salvar {
   padding: 12px 24px;
   background-color: #2ecc71;
   color: white;
@@ -465,7 +468,7 @@ input[type="email"]:focus, input[type="password"]:focus {
   transition: background-color 0.3s;
 }
 
-.btn-cadastrar:hover {
+.btn-cadastrar:hover, .btn-salvar:hover {
   background-color: #27ae60;
 }
 

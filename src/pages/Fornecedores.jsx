@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import ModalCadastroFornecedor from '../components/ModalCadastroFornecedor';
 import ModalListarFornecedor from '../components/ModalListarFornecedor';
+import ModalEditarFornecedor from '../components/ModalEditarFornecedor';
 
 const Fornecedores = () => {
   const [modalCadastroAberto, setModalCadastroAberto] = useState(false);
@@ -8,7 +9,18 @@ const Fornecedores = () => {
   const [modalEditarAberto, setModalEditarAberto] = useState(false);
   const [modalExcluirAberto, setModalExcluirAberto] = useState(false);
   
-  const [fornecedores, setFornecedores] = useState([]);
+  const [fornecedores, setFornecedores] = useState([
+    {
+      id: 'forn01',
+      razaoSocial: 'Fornecedor A',
+      nomeFantasia: 'Fornecedor ABC',
+      endereco: 'Rua Teste, 123',
+      email: 'contato@fornecedor.com',
+      telefone: '(11) 9999-9999',
+      cnpj: '12.345.678/0001-90',
+      tipoPessoa: 'juridica'
+    }
+  ]);
   const [fornecedorSelecionado, setFornecedorSelecionado] = useState(null);
 
   const handleSalvarFornecedor = (novoFornecedor) => {
