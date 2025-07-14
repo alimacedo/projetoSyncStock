@@ -7,6 +7,7 @@ import LoginForm from './components/LoginForm';
 import GestaoEstoque from './pages/GestaoEstoque';
 import Projetos from './pages/Projetos';
 import Fornecedores from './pages/Fornecedores';
+import Produtos from './pages/Produtos';
 import './index.css';
 
 const router = createBrowserRouter([
@@ -18,7 +19,8 @@ const router = createBrowserRouter([
       { path: "home", element: <Home /> },
       { path: "gestao-estoque", element: <GestaoEstoque /> },
       { path: "projetos", element: <Projetos /> },
-      { path: "fornecedores", element: <Fornecedores /> }
+      { path: "fornecedores", element: <Fornecedores /> },
+      { path: "produtos", element: <Produtos /> }
     ]
   }
 ]);

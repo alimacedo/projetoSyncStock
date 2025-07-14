@@ -5,6 +5,8 @@ const Header = () => {
 
   const getTitle = () => {
     switch (location.pathname) {
+      case '/produtos':
+        return 'Produtos';
       case '/fornecedores':
         return 'Fornecedores';
       case '/projetos':
