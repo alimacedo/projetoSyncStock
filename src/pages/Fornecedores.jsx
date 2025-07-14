@@ -2,6 +2,7 @@ import { useState } from 'react';
 import ModalCadastroFornecedor from '../components/ModalCadastroFornecedor';
 import ModalListarFornecedor from '../components/ModalListarFornecedor';
 import ModalEditarFornecedor from '../components/ModalEditarFornecedor';
+import ModalExcluirFornecedor from '../components/ModalExcluirFornecedor';
 
 const Fornecedores = () => {
   const [modalCadastroAberto, setModalCadastroAberto] = useState(false);
@@ -18,6 +19,16 @@ const Fornecedores = () => {
       email: 'contato@fornecedor.com',
       telefone: '(11) 9999-9999',
       cnpj: '12.345.678/0001-90',
+      tipoPessoa: 'juridica'
+    },
+    {
+      id: 'forn02',
+      razaoSocial: 'Fornecedor B',
+      nomeFantasia: 'Fornecedor DSGV',
+      endereco: 'Rua KDLJF, 2',
+      email: 'contato@gmail.com',
+      telefone: '(11) 9529-3699',
+      cnpj: '00.111.413/0001-90',
       tipoPessoa: 'juridica'
     }
   ]);
@@ -114,11 +125,14 @@ const Fornecedores = () => {
         />
       )}
 
-      {modalExcluirAberto && fornecedorSelecionado && (
+      {modalExcluirAberto && (
         <ModalExcluirFornecedor
-          fornecedor={fornecedorSelecionado}
-          onConfirm={() => handleExcluirFornecedor(fornecedorSelecionado.id)}
-          onClose={() => setModalExcluirAberto(false)}
+          fornecedores={fornecedores}
+          onConfirm={(id) => {
+            handleExcluirFornecedor(id);
+            setModalExcluirAberto(false);
+      }}
+      onClose={() => setModalExcluirAberto(false)}
         />
       )}
     </div>

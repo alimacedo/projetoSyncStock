@@ -174,7 +174,7 @@ input[type="email"]:focus, input[type="password"]:focus {
 .fundo-modal-cadastroProjeto, .fundo-modal-editarProjeto,
 .fundo-modal-listarProjeto, .fundo-modal-excluirProjeto,
 .fundo-modal-cadastroFornecedor, .fundo-modal-listarFornecedor,
-.fundo-modal-editarFornecedor {
+.fundo-modal-editarFornecedor, .fundo-modal-excluirFornecedor {
   position: fixed;
   top: 0;
   left: 0;
@@ -189,7 +189,7 @@ input[type="email"]:focus, input[type="password"]:focus {
 
 .caixa-modal-cadastroProduto, .caixa-modal-cadastroProjeto,
 .caixa-modal-editarProjeto, .caixa-modal-listarProjeto,
-.caixa-modal-excluirProjeto {
+.caixa-modal-excluirProjeto, .caixa-modal-excluirFornecedor {
   background-color: white;
   padding: 18px 24px;
   border-radius: 8px;
@@ -238,7 +238,7 @@ input[type="email"]:focus, input[type="password"]:focus {
 .fechar-modal-cadastroProjeto, .fechar-modal-editarProjeto,
 .fechar-modal-listarProjeto, .fechar-modal-excluirProjeto,
 .fechar-modal-cadastroFornecedor, .fechar-modal-listarFornecedor,
-.fechar-modal-editarFornecedor {
+.fechar-modal-editarFornecedor, .fechar-modal-excluirFornecedor {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -253,7 +253,7 @@ input[type="email"]:focus, input[type="password"]:focus {
 .titulo-modal-cadastroProjeto, .titulo-modal-editarProjeto,
 .titulo-modal-listarProjeto, .titulo-modal-excluirProjeto,
 .titulo-modal-cadastroFornecedor, .titulo-modal-listarFornecedor,
-.titulo-modal-editarFornecedor {
+.titulo-modal-editarFornecedor, .titulo-modal-excluirFornecedor {
   margin-top: 0;
   color: #2c3e50;
   text-align: center;
@@ -315,13 +315,13 @@ input[type="email"]:focus, input[type="password"]:focus {
   background-color: #f5f5f5;
 }
 
-.lista-projetos-exclusao {
+.lista-projetos-exclusao, .lista-fornecedores-exclusao {
   max-height: 300px;
   overflow-y: auto;
   margin-bottom: 20px;
 }
 
-.lista-projetos-exclusao ul {
+.lista-projetos-exclusao ul, .lista-fornecedores-exclusao ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -343,6 +343,60 @@ input[type="email"]:focus, input[type="password"]:focus {
 .item-projeto.selecionado {
   border-color: #dc3545;
   background-color: #f8d7da;
+}
+
+.item-fornecedor {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-fornecedor:hover {
+  background-color: #f5f5f5;
+}
+
+.item-fornecedor.selecionado {
+  background-color: #ffebee;
+  border-color: #d32f2f;
+}
+
+.btn-excluir-modalExcluirFornecedor {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-excluir-modalExcluirFornecedor:hover:not(:disabled) {
+  background-color: #b71c1c;
+}
+
+.btn-excluir-modalExcluirFornecedor:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-cancelar-modalExcluirFornecedor {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-cancelar-modalExcluirFornecedor:hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+.fornecedor-detalhes {
+  font-size: 12px;
+  color: #666;
 }
 
 .projeto-detalhes {
@@ -430,7 +484,7 @@ input[type="email"]:focus, input[type="password"]:focus {
   background-color: #c0392b;
 }
 
-.btn-excluir-modalExcluirProjeto {
+.btn-excluir-modalExcluirProjeto, .btn-excluir-modalExcluirFornecedor {
   padding: 12px 24px;
   background-color: #877b79;
   color: white;
@@ -440,11 +494,12 @@ input[type="email"]:focus, input[type="password"]:focus {
   transition: background-color 0.3s;
 }
 
-.btn-excluir-modalExcluirProjeto:hover {
+.btn-excluir-modalExcluirProjeto:hover,
+.btn-excluir-modalExcluirFornecedor:hover {
   background-color: #6d6463;
 }
 
-.btn-cancelar-modalExcluirProjeto {
+.btn-cancelar-modalExcluirProjeto, .btn-cancelar-modalExcluirFornecedor {
   padding: 12px 24px;
   background-color: #e74c3c;
   color: white;
@@ -454,7 +509,8 @@ input[type="email"]:focus, input[type="password"]:focus {
   transition: background-color 0.3s;
 }
 
-.btn-cancelar-modalExcluirProjeto:hover {
+.btn-cancelar-modalExcluirProjeto:hover,
+.btn-cancelar-modalExcluirFornecedor:hover {
   background-color: #c0392b;
 }
 
